@@ -11,7 +11,6 @@ app.get('/weather', function(req, res) {
     if(!zip) {
         res.status(500);
         res.send("Error: No zip specified");
-        console.log("Error: No zip specified");
     }
     request.get({url: "http://api.openweathermap.org/data/2.5/weather?zip="+ zip +
         ",us&units=imperial&APPID=4e19cf4cdf366364f45ce4e4d98624f9"}, function(error, response, body) {
@@ -20,7 +19,7 @@ app.get('/weather', function(req, res) {
             } else {
                 res.status(response.statusCode);
                 res.send(error);
-                Console.log("Error returned from API: " + error);
+                console.log("Error returned from API");
             }
         });
 });

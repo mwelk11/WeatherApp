@@ -3,17 +3,24 @@
     <section class="jumbotron">
         <div class="container">
             <h1>Weather Search</h1>
-            <form>
-                <div class="input-group input-group-lg">
-                    <input type="text" ng-model="zip" class="form-control" placeholder="Enter zipcode...">
+            <form name="zipForm">
+                <div class="input-group input-group-lg" 
+                ng-class="{ 'has-error' : zipForm.zip.$invalid && !zipForm.zip.$pristine }">
+                    <input type="text" name="zip" ng-model="zip" class="form-control" placeholder="Enter zipcode..."
+                    required ng-minlength="5" ng-maxlength="5" zip-directive>
+                    <p ng-show="zipForm.zip.$invalid && !zipForm.zip.$pristine" class="help-block">
+                        Zip is invalid!
+                    </p>
                 </div>
-                <button type="submit" class="btn btn-primary" ng-click="search()">Search</button>
+                <button type="submit" class="btn btn-primary" ng-click="search()" ng-disabled="zipForm.$invalid">
+                    Search
+                </button>
             </form>
         </div>
     </section>
 
     <div class="table-responsive">
-        <table class="table table-striped table-bordered" id="weatherTable">
+        <table class="table table-striped table-bordered" id="weatherTable" ng-show="hasResults">
             <thead>
                 <tr>
                     <th>Name</th>
