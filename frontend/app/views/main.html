@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+    <section class="jumbotron">
+        <div class="container">
+            <h1>Weather Search</h1>
+            <form>
+                <div class="input-group input-group-lg">
+                    <input type="text" ng-model="zip" class="form-control" placeholder="Enter zipcode...">
+                </div>
+                <button type="submit" class="btn btn-primary" ng-click="search()">Search</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered" id="weatherTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Current (F)</th>
+                    <th>High (F)</th>
+                    <th>Low (F)</th>
+                    <th>Wind (mph)</th>
+                    <th>Humidity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{ results.name }}</td>
+                    <td>{{ results.weather[0].description }}</td>
+                    <td>{{ results.main.temp }}</td>
+                    <td>{{ results.main.temp_max }}</td>
+                    <td>{{ results.main.temp_min }}</td>
+                    <td>{{ results.wind.speed }}</td>
+                    <td>{{ results.main.humidity }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</html>

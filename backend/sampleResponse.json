@@ -1,0 +1,52 @@
+{
+    "coord": {
+	    "lon": -75.07,
+	    "lat": 40.21
+    },
+    "weather": [{
+		    "id": 501,
+		    "main": "Rain",
+		    "description": "moderate rain",
+		    "icon": "10d"
+	    }, {
+		    "id": 701,
+		    "main": "Mist",
+		    "description": "mist",
+		    "icon": "50d"
+	    }, {
+		    "id": 301,
+		    "main": "Drizzle",
+		    "description": "drizzle",
+		    "icon": "09d"
+	    }
+    ],
+    "base": "stations",
+    "main": {
+	    "temp": 282.66,
+	    "pressure": 1011,
+	    "humidity": 100,
+	    "temp_min": 281.15,
+	    "temp_max": 285.15
+    },
+    "visibility": 16093,
+    "wind": {
+	    "speed": 2.6,
+	    "deg": 40
+    },
+    "clouds": {
+	    "all": 90
+    },
+    "dt": 1490737440,
+    "sys": {
+	    "type": 1,
+	    "id": 2341,
+	    "message": 0.0061,
+	    "country": "US",
+	    "sunrise": 1490698122,
+	    "sunset": 1490743309
+    },
+    "id": 5195068,
+    "name": "Ivyland",
+    "cod": 200
+}
+
